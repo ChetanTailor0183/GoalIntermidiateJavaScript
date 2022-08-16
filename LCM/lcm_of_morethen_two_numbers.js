@@ -2,6 +2,20 @@
 var element_array = [2,4,5];
 console.log(lcm_of_array_elements(element_array));
 
+/**
+Write a JavaScript function to get the least common multiple (LCM)
+of more than 2 integers.
+Test Data :
+console.log(lcm_more_than_two_numbers([100,90,80,7]));
+console.log(lcm_more_than_two_numbers([5,10,15,25]));
+
+Output :
+25200
+150
+ * 
+ * @param {element_array} // Array of elements
+ * @returns //lcm Of array of elements
+ */
 function lcm_of_array_elements(element_array)
     {
         var lcm_of_array_elements = 1;

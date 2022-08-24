@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="mytext">
+        <p>
+        </p>
+    </div>
+</body>
+<script>
+    let text = "We have just started this section for the users ( beginner to intermediate ) who want to work with various JavaScript problems and write scripts online to test their JavaScript skill .";
+    let highlightedText = ["We","this","beginner","want","various","problems","test","skill"];
+    let saperatedWords = text.split(" ");
+    let result = "";
+    for(let i = 0 ; i < saperatedWords.length ; i++){
+        if(highlightedText.includes(saperatedWords[i]) ){
+            result += `<a href="https://lnd.org40now.com/dashboard">`+saperatedWords[i]+` </a>`;
+        }
+        else{
+            result += saperatedWords[i] + " "
+        }
+    }
+    document.getElementById("mytext").innerHTML = result;
+</script>
+
+</html>

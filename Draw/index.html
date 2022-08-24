@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="circle" width="400" height="400"></canvas>
+</body>
+<script>
+    function draw() {
+        var canvas = document.getElementById('circle');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+            var X = canvas.width / 2;
+            var Y = canvas.height / 2;
+
+            //drawing full circle
+            var R = 150;
+            ctx.beginPath();
+            ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = '#000000';
+            ctx.stroke();
+
+            //drawing semi-circle
+            var R = 100;
+            ctx.beginPath();
+            ctx.arc(X, Y, R, 0, 1 * Math.PI, false);
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = '#000000';
+            ctx.stroke();
+
+            //drawing left eye
+            var R = 20;
+            ctx.beginPath();
+            ctx.arc(X - 50, Y - 30, R, 0, 2 * Math.PI, false);
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = '#000000';
+            ctx.stroke();
+
+            //drawing right eye
+            var R = 20;
+            ctx.beginPath();
+            ctx.arc(X + 50, Y - 30, R, 0, 2 * Math.PI, false);
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = '#000000';
+            ctx.stroke();
+
+            //Drawing line between eyes
+            ctx.beginPath()
+            ctx.moveTo(270, 170)
+            ctx.lineTo(130,170)
+            ctx.stroke();
+
+        }
+
+
+    }
+
+</script>
+
+</html>
